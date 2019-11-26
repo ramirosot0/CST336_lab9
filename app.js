@@ -104,6 +104,12 @@ app.post('/quotes', (req, res, next)=>{
     }
 });
 
-var server = app.listen(5000, function () {
-    console.log('Server is running..');
+//localhost listener
+// var server = app.listen(5000, function () {
+//     console.log('Server is running..');
+// });
+
+//heroku listener
+app.listen(process.env.PORT, process.env.IP, function () {
+    console.log("Running Express Server...");
 });
