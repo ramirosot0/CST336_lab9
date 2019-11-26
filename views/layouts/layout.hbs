@@ -1,0 +1,75 @@
+    {{> header }}
+
+
+<div class="container">
+    <h1>{{title}}</h1>
+    <form method="post" action="/quotes"  >
+        <div class="form-group">
+            <label for="keyword"> Keyword </label>
+            <input type="text" class="form-control" placeholder="Enter Keyword" name="keyword">
+            <small id="emailHelp" class="form-text text-muted">Search by keyword.</small>
+        </div>
+        <div class="form-group">
+            <label for="category"> Category </label>
+            <input type="text" class="form-control" placeholder="Category" name="category">
+        </div>
+        <div class="form-group">
+            <label for="author"> Author </label>
+            <input type="text" class="form-control" placeholder="Author's Name" name="author">
+        </div>
+        <div class="form-group">
+            <label for="gender"> Gender </label>
+            <input type="text" name="gender" class="form-control" placeholder="Gender">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+    <div class="container">
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div>
+                        <table  class="table table-bordered">
+                            {{#each quotes}}
+
+                                <tr>
+                                    <td>{{fullname}}</td>
+                                    <td>{{quote}}</td>
+                                    <td>{{category}}</td>
+                                    <td>{{gender}}</td>
+                                </tr>
+                            {{/each}}
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        $(window).on('load',function(){
+            $('#myModal').modal('show');
+        });
+    </script>
+
+
+
+
+    {{> footer}}
+
+

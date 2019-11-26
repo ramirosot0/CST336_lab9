@@ -1,0 +1,29 @@
+{
+  "name": "cst336_lab9",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thekokoloko/CST336_lab9.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thekokoloko/CST336_lab9/issues"
+  },
+  "homepage": "https://github.com/thekokoloko/CST336_lab9#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^2.7.4",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "handlebars": "^4.5.3",
+    "mysql": "^2.17.1",
+    "preinstall": "rm package-lock.json"
+  }
+}
